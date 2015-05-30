@@ -1,3 +1,8 @@
+let persons = [("bob", 20), ("alice", 19)]
+
+for name, age in persons:
+  echo name, age
+
 import os
 import nimblepkg/packageinfo
 
