@@ -11,13 +11,17 @@ var bins = newSeq[(string, string)]()
 
 var nimargs = newSeq[string]()
 
+# convenient imports for a .nimble
+import os
+
 
 # include the .nimble
 include build
 
+
+# imports only required in the following
 import typetraits
 import strutils
-import os
 
 # check mandatory fields, or rather identifiers.
 # could be wrapped in a macro...
