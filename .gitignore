@@ -2,3 +2,4 @@ nimcache
 bin
 .changes
 .nimbletmp
+./nimnimble
