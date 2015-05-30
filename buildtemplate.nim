@@ -100,7 +100,7 @@ setCurrentDir(buildDir)
 
 # now build
 for src, bin in bins.items:
-  echo " * compiling " & src & " => " & bin
+  echo " * compiling: " & src & " => " & bin
   var cmd = @["nim c"]
   for nimarg in nimargs:
     cmd += nimarg
@@ -111,7 +111,7 @@ for src, bin in bins.items:
 
   cmd += src
   let finalCmd = cmd.join(" ")
-  echo finalCmd
+  echo "   " & finalCmd
 
 
   # make sure output directory exists
