@@ -11,7 +11,7 @@ compiler_exit=$?
 
 if [ "$compiler_exit" -eq 0 ] ; then
   # test with an example .nimble
-  cd example2
+  cd example1
   ../nimnimble build
 fi
 

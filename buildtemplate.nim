@@ -26,28 +26,41 @@ import strutils
 # check mandatory fields, or rather identifiers.
 # could be wrapped in a macro...
 
+# we need "not compiles" since `name` seems to be declared
+# somewhere but it cannot be passed to a procvar...
+
 when not declared(name):
-  {.error: "Nimble parse error: .nimble has no `name` specified".}
+  {.error: "Nimble parse error: no `name` specified".}
+when not compiles(name is not string):
+  {.error: "Nimble parse error: type of `name` is not string".}
 when name is not string:
   {.error: "Nimble parse error: type of `name` is not string".}
 
 when not declared(author):
-  {.error: "Nimble parse error: .nimble has no `author` specified".}
+  {.error: "Nimble parse error: no `author` specified".}
+when not compiles(author is not string):
+  {.error: "Nimble parse error: type of `author` is not string".}
 when author is not string:
   {.error: "Nimble parse error: type of `author` is not string".}
 
 when not declared(version):
-  {.error: "Nimble parse error: .nimble has no `version` specified".}
+  {.error: "Nimble parse error: no `version` specified".}
+when not compiles(version is not string):
+  {.error: "Nimble parse error: type of `version` is not string".}
 when version is not string:
   {.error: "Nimble parse error: type of `version` is not string".}
 
 when not declared(description):
-  {.error: "Nimble parse error: .nimble has no `description` specified".}
+  {.error: "Nimble parse error: no `description` specified".}
+when not compiles(description is not string):
+  {.error: "Nimble parse error: type of `description` is not string".}
 when description is not string:
   {.error: "Nimble parse error: type of `description` is not string".}
 
 when not declared(license):
-  {.error: "Nimble parse error: .nimble has no `license` specified".}
+  {.error: "Nimble parse error: no `license` specified".}
+when not compiles(license is not string):
+  {.error: "Nimble parse error: type of `description` is not string".}
 when license is not string:
   {.error: "Nimble parse error: type of `license` is not string".}
 

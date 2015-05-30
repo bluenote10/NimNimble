@@ -1,7 +1,7 @@
 
 let
   name        = "ExampleProject"
-  author      = "Some Author"
+  #author      = "Some Author"
   version     = "0.1.0"
   description = "should maybe not required?"
   license     = "MIT"
